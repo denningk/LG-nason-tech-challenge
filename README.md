@@ -1,5 +1,5 @@
 # LG-nason-tech-challenge
-Welcome! You've been contracted by **Blast Off Catering** :rocket: to develop a web application that will display customer catering orders. Your contract states that the application is to be finished no later than Friday, October 19th, 2018, at 4:00PM. All code should be committed to the GitHub repository as detailed in the instructions below. @denningk is your point of contact for this project. He can be contacted through the tech challenge slack channel after 6PM.
+Welcome! You've been contracted by **Blast Off Catering** :rocket: to develop a web application that will display customer catering orders. Your contract states that the application is to be finished no later than **Friday, October 19th, 2018, at 4:00PM**. All code should be committed to the GitHub repository as detailed in the instructions below. [@denningk](https://github.com/denningk) is your point of contact for this project. He can be contacted through the tech challenge slack channel after 6PM.
 
 The application will have two pages: 
 1. *Dashboard Landing Page* A dashboard that will list all current orders, sorted by customer. The orders should be in one table with two columns. The left column should contain all customers. Each cell in the right column should contain a bulleted list of all packages a customer has ordered. The dashboard will also contain a button that leads to the order submission page.
@@ -36,7 +36,7 @@ The application will have two pages:
 
 For all new features/bug fixes, create a new branch with the following naming format: `<your-github-username>/<short-description>`. Example: `denningk/add-instructions`.
 
-Once a feature or bug fix has been tested, merge the branch with the `develop` branch. All pull requests require a review by @denningk before being merged. When the project is complete, a final merge will be done into the `master` branch.
+Once a feature or bug fix has been tested, merge the branch with the `develop` branch. All pull requests require a review by [@denningk](https://github.com/denningk) before being merged. When the project is complete, a final merge will be done into the `master` branch.
 
 ## Database
 The database should be created by adding models into `main/models.py` and then performing a migration as is done in the Django tutorial. The database will contain two tables:
@@ -45,7 +45,7 @@ The database should be created by adding models into `main/models.py` and then p
 
 The entity relationship diagram for the database is shown below. **Remember** Django implicitly creates an *id* field for each entity. This *id* field does not need to be added to `main/models.py`.
 
-[erd](./erd.PNG)
+![erd](./erd.PNG)
 
 Customer names are unique. If a form is a submitted with a customer name that is already in the database, that package should be assigned to that customer instead of creating a new one. Package names are arbitrary and are not unique.
 
@@ -54,10 +54,10 @@ Customer names are unique. If a form is a submitted with a customer name that is
 * Frontend: HTML/CSS/JavaScript with Bootstrap 4 framework (use CDN for Bootstrap)
 * Database: SQLite database (Included with Django)
 * Version Control: Git/GitHub
-* Text Editor: Visual Studio Code w/ Python extension (Optional)
+* Text Editor: [Visual Studio Code](https://code.visualstudio.com/) w/ Python extension (Optional)
 
 ## Resources
-You may receive help from anyone or from any website online. You may ask questions to @denningk in the slack channel or by tagging him in comments on GitHub after 6PM. While you may copy and paste code for generic functionality, you should be the only person typing into your text editor. Please ask for help, it will be near impossible to complete this project on your own.
+You may receive help from anyone or from any website online. You may ask questions to [@denningk](https://github.com/denningk) in the slack channel or by tagging him in comments on GitHub after 6PM. While you may copy and paste code for generic functionality, you should be the only person typing into your text editor. Please ask for help, it will be more difficult to complete this project on your own.
 
 ### Django
 [Installation and Tutorial](https://www.djangoproject.com/start/)
