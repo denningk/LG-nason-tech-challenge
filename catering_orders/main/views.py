@@ -35,15 +35,18 @@ def handle(request):
         
         if customerName != '' and order != '':
 
-            try: 
+            try:
                 existingCustomer = Customer.objects.get(name=customerName)
+                #if customer in database already
                 o = Package(name=order, customer_id=existingCustomer.id)
                 o.save()
 
             except Customer.DoesNotExist:
+                #if customer not yet in database
                 n = Customer(name=customerName)
                 n.save()
                 o = Package(name=order, customer_id=n.id)
                 o.save()
-        
+                
+    #redirects to landing page to show the updated customer in database       
     return HttpResponseRedirect('/main/landing/')

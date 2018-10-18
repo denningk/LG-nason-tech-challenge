@@ -3,8 +3,6 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-# Create your models here.
-
 class Customer(models.Model):
     #id field is added automatically by django
     name = models.CharField(max_length=50)
@@ -13,6 +11,7 @@ class Customer(models.Model):
         return self.name
 
 class Package(models.Model):
+    #id field is added automatically by django
     name = models.CharField(max_length=50)
     customer = models.ForeignKey(Customer, on_delete = models.CASCADE)
 
