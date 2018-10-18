@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static%}
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static "landing.css"%}">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Landing Dashboard</title>
+  </head>
+  <header>
+    <h1>Blast Off Catering</h1>
+  </header>
+  <body>
+    <h2>Landing Dashboard</h2>
+    {% if customerList and packageList %}
+      <table>
+        <tr>
+          <th>Customer</th>
+          <th>Order</th>
+        </tr>
+        {% for customer in customerList%}
+            <tr>
+                <td>{{customer.name}}</td>
+                <td id="listOfOrders"><ul>
+                  {% for order in packageList%}
+                    {% if customer.id == order.customer_id%}
+                      <li>{{order.name}}</li>
+                    {%endif%}
+                  {% endfor %}
+                </ul></td>
+            </tr>
+        {% endfor %}
+      </table>
+
+    {% else %}
+      <p>No orders to display at this time</p>
+    {%endif%}
+    <a href="/main/order"><button type="button">Order Now</button></a>
+  </body>
+</html>

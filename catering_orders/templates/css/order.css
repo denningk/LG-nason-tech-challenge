@@ -1,0 +1,46 @@
+/*order.css*/
+
+body{
+  background-color: #F2F2F2;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1{
+  color: #2F0B3A;
+  background-color: #D8D8D8;
+  margin: 0;
+  padding: 20px;
+}
+
+h2, h4, form{
+  color: #2F0B3A;
+  margin-left: 30%;
+}
+
+form{
+  padding: 10px;
+  font-size: 14pt;
+  width: 470px;
+  background-color: #F8E0F7;
+  border-radius: 6px;
+  border-color: #2F0B3A;
+}
+
+input{
+  font-size: 12pt;
+}
+
+#submitbutton{
+  margin-top: 10px;
+  padding: 7px;
+  text-align: center;
+  font-size: 14pt;
+  cursor: pointer;
+  background-color: #848484;
+  border: #848484;
+  color: #F2F2F2;
+  border-radius: 6px;
+  font-size: 12pt;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  cursor: pointer;
+}
