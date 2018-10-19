@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static%}
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static "order.css"%}">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Place Your Order</title>
+
+    <script type="text/javascript">
+    function validForm(){
+      /*check validitiy of form before submitting POST request*/
+      var name = document.orderform.namefield;
+      var order = document.orderform.orderfield;
+      var nameValid = false;
+      var orderValid = false;
+      if (name.value != ""){
+        nameValid = true;
+      }
+      if (order.value !=""){
+        orderValid = true;
+      }
+      if (!nameValid && orderValid){
+        alert("Must enter an name.");
+        return false;
+      }
+      else if(nameValid && !orderValid) {
+        alert("Must enter an order.");
+        return false;
+      }
+      if(!nameValid && !orderValid){
+        alert("Must enter a name and an order.");
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+  </script>
+  </head>
+  <header>
+    <h1>Blast Off Catering</h1>
+  </header>
+  <body>
+    <div class="container-fluid">
+    <h2>Order here</h2>
+
+    <h4>Please submit an order using the form below.</h4>
+
+    <form action = "/main/handle/" method="post" name="orderform" onsubmit="return validForm();">
+      {% csrf_token %}
+      <label>Name: <input type="text" size="20" name="namefield"/></label>
+      <br>
+      <br>
+      <label>Order: <input type="text" size="40" name="orderfield"/></label>
+      <br>
+      <br>
+      <input type="submit" value="Submit" id="submitbutton">
+    </form>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+/*landing.css*/
+
+h1{
+  color: #2F0B3A;
+  background-color: #D8D8D8;
+  margin: 0;
+  padding: 20px;
+}
+
+h2{
+  color: #2F0B3A;
+}
+
+table, h2, button{
+  margin-left: 5%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  font-size: 13pt;
+  color: #2F0B3A;
+
+}
+
+table, th, td{
+  border: 1px solid black;
+  border-color: #2F0B3A;
+}
+
+td, th{
+  vertical-align: middle;
+  text-align: center;
+}
+
+th{
+  background-color: #8A0886;
+  color: #F2F2F2;
+}
+
+tr:nth-child(even) {
+  background-color: #F8E0F7;
+}
+
+tr:nth-child(odd) {
+  background-color:  #FBEFF5;
+}
+
+#listOfOrders{
+  text-align: left;
+}
+
+body{
+  background-color: #F2F2F2;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+button{
+  margin-top: 20px;
+  padding: 7px;
+  text-align: center;
+  background-color: #848484;
+  border: #848484;
+  color: #F2F2F2;
+  border-radius: 6px;
+  font-size: 12pt;
+  cursor: pointer;
+}
